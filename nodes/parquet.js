@@ -1,4 +1,4 @@
-var parquet = require('parquetjs-lite');
+var parquet = require('@dsnp/parquetjs');
 var fs = require('fs');
 
 module.exports = function(RED) {
