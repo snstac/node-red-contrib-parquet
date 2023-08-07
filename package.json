@@ -1,6 +1,6 @@
 {
   "name": "@snstac/node-red-contrib-parquet",
-  "version": "1.0.0-beta4",
+  "version": "1.0.0-beta5",
   "description": "Node-RED Node for manipulating Parquet data.",
   "license": "MIT",
   "url": "https://github.com/snstac/node-red-contrib-parquet",

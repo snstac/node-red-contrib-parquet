@@ -14,7 +14,7 @@ jobs:
 
       - name: npm pack
         run: |
-          export REPO_NAME=$(echo ${{ github.repository }} | awk -F"/" '{print $2}')
+          export REPO_NAME=$(echo ${{ github.repository }} | sed 's{/{-{g')
           npm pack
           cp ${REPO_NAME}*.tgz ${REPO_NAME}-latest.tgz
 
