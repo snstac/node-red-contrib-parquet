@@ -1,103 +1,91 @@
 [
-    {
-        "id": "69d08c5ddd8e63e1",
-        "type": "tab",
-        "label": "Write Parquet",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "f9fe271065e6c322",
-        "type": "file",
-        "z": "69d08c5ddd8e63e1",
-        "name": "",
-        "filename": "",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 480,
-        "y": 80,
-        "wires": [
-            [
-                "02bb0a644dce2f75"
-            ]
-        ]
-    },
-    {
-        "id": "176af4159f558f8c",
-        "type": "inject",
-        "z": "69d08c5ddd8e63e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "filename",
-                "v": "files/writeParquet.parquet",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"column1\":\"val1\",\"column2\":2},{\"column1\":\"val3\",\"column2\":4}]",
-        "payloadType": "json",
-        "x": 130,
-        "y": 80,
-        "wires": [
-            [
-                "35ea460570965476"
-            ]
-        ]
-    },
-    {
-        "id": "35ea460570965476",
-        "type": "parquet",
-        "z": "69d08c5ddd8e63e1",
-        "name": "write parquet",
-        "option": "write",
-        "columns": [
-            {
-                "column": "column1",
-                "type": "UTF8"
-            },
-            {
-                "column": "column2",
-                "type": "INT32"
-            }
-        ],
-        "rcolumns": "",
-        "multi": "single",
-        "outputPty": "payload",
-        "outputPtyType": "msg",
-        "x": 310,
-        "y": 80,
-        "wires": [
-            [
-                "f9fe271065e6c322"
-            ]
-        ]
-    },
-    {
-        "id": "02bb0a644dce2f75",
-        "type": "debug",
-        "z": "69d08c5ddd8e63e1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 80,
-        "wires": []
-    }
+  {
+    "id": "69d08c5ddd8e63e1",
+    "type": "tab",
+    "label": "Write Parquet",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "f9fe271065e6c322",
+    "type": "file",
+    "z": "69d08c5ddd8e63e1",
+    "name": "",
+    "filename": "",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 480,
+    "y": 80,
+    "wires": [["02bb0a644dce2f75"]]
+  },
+  {
+    "id": "176af4159f558f8c",
+    "type": "inject",
+    "z": "69d08c5ddd8e63e1",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "filename",
+        "v": "files/writeParquet.parquet",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "[{\"column1\":\"val1\",\"column2\":2},{\"column1\":\"val3\",\"column2\":4}]",
+    "payloadType": "json",
+    "x": 130,
+    "y": 80,
+    "wires": [["35ea460570965476"]]
+  },
+  {
+    "id": "35ea460570965476",
+    "type": "parquet",
+    "z": "69d08c5ddd8e63e1",
+    "name": "write parquet",
+    "option": "write",
+    "columns": [
+      {
+        "column": "column1",
+        "type": "UTF8"
+      },
+      {
+        "column": "column2",
+        "type": "INT32"
+      }
+    ],
+    "rcolumns": "",
+    "multi": "single",
+    "outputPty": "payload",
+    "outputPtyType": "msg",
+    "x": 310,
+    "y": 80,
+    "wires": [["f9fe271065e6c322"]]
+  },
+  {
+    "id": "02bb0a644dce2f75",
+    "type": "debug",
+    "z": "69d08c5ddd8e63e1",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 670,
+    "y": 80,
+    "wires": []
+  }
 ]
